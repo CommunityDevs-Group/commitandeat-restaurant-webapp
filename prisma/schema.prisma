@@ -1,8 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
-
 generator client {
   provider = "prisma-client"
   output   = "../src/generated/prisma"
@@ -10,4 +5,80 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+}
+
+// ============================================
+// MENU MODELS
+// ============================================
+
+model MenuCategory {
+  id          String     @id @default(cuid())
+  name        String     @unique
+  description String?
+  sortOrder   Int        @default(0)
+  isActive    Boolean    @default(true)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  items       MenuItem[]
+
+  @@map("menu_categories")
+}
+
+model MenuItem {
+  id          String       @id @default(cuid())
+  name        String
+  description String?
+  price       Decimal      @db.Decimal(10, 2)
+  image       String?
+  isAvailable Boolean      @default(true)
+  categoryId  String
+  category    MenuCategory @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@map("menu_items")
+}
+
+// ============================================
+// TABLE & RESERVATION MODELS
+// ============================================
+
+model Table {
+  id           String        @id @default(cuid())
+  number       Int           @unique
+  capacity     Int
+  positionX    Float         @default(0)
+  positionY    Float         @default(0)
+  isActive     Boolean       @default(true)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  reservations Reservation[]
+
+  @@map("tables")
+}
+
+model Reservation {
+  id        String            @id @default(cuid())
+  date      DateTime          @db.Date
+  startTime DateTime          @db.Time()
+  endTime   DateTime          @db.Time()
+  guestName String
+  phone     String
+  email     String?
+  guestCount Int
+  notes     String?
+  status    ReservationStatus @default(PENDING)
+  tableId   String
+  table     Table             @relation(fields: [tableId], references: [id], onDelete: Cascade)
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @updatedAt
+
+  @@map("reservations")
+}
+
+enum ReservationStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  COMPLETED
 }
