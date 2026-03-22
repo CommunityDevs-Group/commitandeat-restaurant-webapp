@@ -41,6 +41,7 @@ yarn-error.log*
 
 # claude
 .claude
+CLAUDE.md
 
 # internal team docs (tasks on Trello, onboarding shared separately)
 docs/SPRINT-*.md
