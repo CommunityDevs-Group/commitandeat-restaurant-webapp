@@ -45,7 +45,6 @@ CLAUDE.md
 
 # internal team docs (tasks on Trello, onboarding shared separately)
 docs/SPRINT-*.md
-docs/onboarding-*.md
 
 # typescript
 *.tsbuildinfo
