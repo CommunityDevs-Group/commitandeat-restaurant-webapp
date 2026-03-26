@@ -128,8 +128,4 @@
   html {
     @apply font-sans;
   }
-
-  h1, .display-text {
-    @apply font-tilt;
-  }
 }

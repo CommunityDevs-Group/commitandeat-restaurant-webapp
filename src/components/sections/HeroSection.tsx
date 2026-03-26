@@ -1,4 +1,4 @@
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const HeroSection = () => {
@@ -29,7 +29,12 @@ const HeroSection = () => {
           </Button>
         </Link>
         <Link href={"/menu"}>
-          <Button className={"font-inter font-light border-border bg-[#2D2C2C] text-white text-md sm:text-xl md:text-2xl px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 cursor-pointer"}>
+          <Button
+            variant={"outline"}
+            className={
+              "font-inter font-light bg-[#2D2C2C] text-white text-md sm:text-xl md:text-2xl px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 cursor-pointer"
+            }
+          >
             View Menu
           </Button>
         </Link>
