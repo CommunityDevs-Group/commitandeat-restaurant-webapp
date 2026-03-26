@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen min-h-[80vh] flex items-center justify-center flex-col bg-cover bg-center bg-[url('/images/hero.jpg')]">
+    <section className="relative h-screen flex items-center justify-center flex-col bg-cover bg-center bg-[url('/images/hero.jpg')]">
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 z-0"></div>
 
@@ -20,12 +20,16 @@ const HeroSection = () => {
       {/* Buttons */}
       <div className="relative z-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full">
         <Link href={"/reservation"}>
-          <Button variant={"reserve"} className={"font-inter font-light"}>
+          <Button
+            className={
+              "font-inter font-light bg-red-600 text-white text-md sm:text-xl md:text-2xl px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 cursor-pointer"
+            }
+          >
             Reserve Your Table
           </Button>
         </Link>
         <Link href={"/menu"}>
-          <Button variant={"view_menu"} className={"font-inter font-light"}>
+          <Button className={"font-inter font-light border-border bg-[#2D2C2C] text-white text-md sm:text-xl md:text-2xl px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 cursor-pointer"}>
             View Menu
           </Button>
         </Link>
