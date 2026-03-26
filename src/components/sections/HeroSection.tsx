@@ -12,18 +12,22 @@ const HeroSection = () => {
         <h1 className="font-extrabold font-tilt text-2xl sm:text-7xl">
           Taste the <span className="text-red-600 italic">extraordinary</span>
         </h1>
-        <p className="text-sm sm:text-xl">
+        <p className="text-sm sm:text-xl font-inter">
           Where culinary artistry meets unforgettable flavors in every bite
         </p>
       </div>
 
       {/* Buttons */}
       <div className="relative z-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full">
-        <Link href={"/reservation"}>    
-          <Button variant={"reserve"}>Reserve Your Table</Button>
+        <Link href={"/reservation"}>
+          <Button variant={"reserve"} className={"font-inter font-light"}>
+            Reserve Your Table
+          </Button>
         </Link>
         <Link href={"/menu"}>
-          <Button variant={"view_menu"}>View Menu</Button>
+          <Button variant={"view_menu"} className={"font-inter font-light"}>
+            View Menu
+          </Button>
         </Link>
       </div>
     </section>
