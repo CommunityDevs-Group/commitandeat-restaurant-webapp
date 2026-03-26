@@ -30,9 +30,8 @@ const HeroSection = () => {
         </Link>
         <Link href={"/menu"}>
           <Button
-            variant={"outline"}
             className={
-              "font-inter font-light bg-[#2D2C2C] text-white text-md sm:text-xl md:text-2xl px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 cursor-pointer"
+              "font-inter font-light text-white bg-[#2c2c2c] border border-white text-md sm:text-xl md:text-2xl px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 cursor-pointer"
             }
           >
             View Menu
