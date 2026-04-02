@@ -397,8 +397,10 @@ Vercel (Auto-deploy on push to main)
 - **Gray:** Inactive tabs, secondary text, borders, muted content
 
 ### Typography
-- Headings: Bold, large — hero titles use decorative italic/script for emphasis ("*extraordinary*")
-- Body: Clean sans-serif (Geist Sans)
+- **Headings:** Bold, large — `Tilt Warp` font (`font-tilt` utility), hero titles use decorative italic/script for emphasis ("*extraordinary*")
+- **Body:** Clean sans-serif — `Inter` font (`font-inter` utility) for paragraphs and buttons
+- **System:** `Geist Sans` (default), `Geist Mono` (code)
+- **CSS Variables:** `--font-tilt-warp`, `--font-inter` (defined in `layout.tsx`, registered in `globals.css` `@theme`)
 
 ### Page Hero Pattern
 Every inner page (Menu, Gallery, Reservation, Contact) has a consistent hero:
