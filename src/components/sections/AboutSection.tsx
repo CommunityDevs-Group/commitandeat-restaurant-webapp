@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const AboutSection = () => {
   return (
     <section className="container mx-auto px-6 py-20 bg-white">
@@ -8,17 +10,24 @@ const AboutSection = () => {
               Crafting Culinary Excellence Since
               <span className="block">2025</span>
             </h2>
-            <p className="text-gray-600 font-inter text-md max-w-2xl leading-relaxed">
-              At Flavore, we believe in the power of exceptional ingredients and
-              masterful preparation. Our award-winning chefs create innovative
-              dishes that celebrate both tradition and creativity.
+            <p className="text-gray-600 font-inter text-base max-w-2xl leading-relaxed">
+              At Commit & Eat, we believe in the power of exceptional
+              ingredients and masterful preparation. Our award-winning chefs
+              create innovative dishes that celebrate both tradition and
+              creativity.
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-10 pt-4">
             {/* Fresh Daily 1 */}
             <div className="flex flex-col items-center justify-center text-center space-y-3">
-              <img src="/images/clock.svg" alt="clock" />
+              <Image
+                src={"/images/clock.svg"}
+                alt="Clock Image"
+                width={40}
+                height={40}
+              />
+
               <h4 className="font-bold font-tilt text-xl">Fresh Daily</h4>
               <p className="text-gray-500 font-inter max-w-50">
                 Local ingredients sourced every morning
@@ -27,8 +36,14 @@ const AboutSection = () => {
 
             {/* Fresh Daily 2 */}
             <div className="flex flex-col items-center justify-center text-center space-y-3">
-              <img src="/images/trophy.svg" alt="trophy" />
-              <h4 className="font-bold font-tilt text-xl">Fresh Daily</h4>
+              <Image
+                src={"/images/trophy.svg"}
+                alt="Clock Image"
+                width={40}
+                height={40}
+              />
+
+              <h4 className="font-bold font-tilt text-xl">Award Winnings</h4>
               <p className="text-gray-500 font-inter max-w-50">
                 Recognized by culinary experts worldwide
               </p>
@@ -45,7 +60,7 @@ const AboutSection = () => {
             />
           </div>
           <div
-            className="absolute -bottom-4 left-[-15%] bg-red-600 text-white 
+            className="absolute -top-8 right-[-10%] sm:right-[-15%] bg-red-600 text-white 
       p-3 sm:p-4 md:p-6 rounded-xl shadow-xl 
       min-w-25 sm:min-w-35 text-center lg:text-left"
           >
