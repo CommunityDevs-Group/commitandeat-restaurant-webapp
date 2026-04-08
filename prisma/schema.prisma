@@ -84,3 +84,19 @@ enum ReservationStatus {
   CANCELLED
   COMPLETED
 }
+
+// ============================================
+// CONTACT MESSAGE MODEL
+// ============================================
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  @@map("contact_messages")
+}
