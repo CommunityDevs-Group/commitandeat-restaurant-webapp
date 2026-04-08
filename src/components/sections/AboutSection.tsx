@@ -38,12 +38,12 @@ const AboutSection = () => {
             <div className="flex flex-col items-center justify-center text-center space-y-3">
               <Image
                 src={"/images/trophy.svg"}
-                alt="Clock Image"
+                alt="Trophy Image"
                 width={40}
                 height={40}
               />
 
-              <h4 className="font-bold font-tilt text-xl">Award Winnings</h4>
+              <h4 className="font-bold font-tilt text-xl">Award Winning</h4>
               <p className="text-gray-500 font-inter max-w-50">
                 Recognized by culinary experts worldwide
               </p>
@@ -53,10 +53,11 @@ const AboutSection = () => {
 
         <div className="relative lg:col-span-1 mx-auto lg:mx-0 w-[80%] md:w-[60%] lg:w-full aspect-5/4">
           <div className="relative rounded-2xl overflow-hidden w-full h-full">
-            <img
+            <Image
               src="/images/chef.png"
               alt="chef"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
           </div>
           <div
