@@ -14,7 +14,7 @@ const Chefs_Speciealties_Section = () => {
         </p>
       </div>
 
-      <div className="container mx-auto place-items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <div className="max-w-5xl mx-auto place-items-center grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         <div className="flex flex-col justify-center max-w-65 h-90 space-y-2 cursor-pointer group">
           <div className="overflow-hidden rounded-t-xl">
             <Image
