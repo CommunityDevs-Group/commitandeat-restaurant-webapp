@@ -11,7 +11,7 @@ export async function GET() {
 
     } catch (error: unknown) {
         
-         const errorMessage = error instanceof Error ? error.message : "Menyu Yüklenmedi";
+         const errorMessage = error instanceof Error ? error.message : "Menu data retrieval failed";
        
       
 
@@ -20,8 +20,8 @@ export async function GET() {
               data:null,
               error:"Internal Server Error",
                 message: errorMessage,
-            }, 
-            { status: 500 }
+            },
+            { status: 500 } 
         );
     }
 }

@@ -1,8 +1,13 @@
+import AboutSection from "@/components/sections/AboutSection";
+import ChefSpecialties from "@/components/sections/ChefSpecialties";
+import HeroSection from "@/components/sections/HeroSection";
+
 export default function Home() {
   return (
     <main>
-      <h1>Commit &amp; Eat</h1>
-      <p>Landing page – coming soon.</p>
+      <HeroSection />
+      <AboutSection />
+      <ChefSpecialties />
     </main>
   );
 }
